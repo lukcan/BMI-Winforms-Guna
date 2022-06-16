@@ -57,7 +57,7 @@ namespace BMI_Guna2
 
         private void calculateBMI()
         {
-            bmi = weight / Math.Pow(height / 100, 2);            
+            bmi = weight / Math.Pow(height / 100, 2);
         }
 
         private void calculate_button_Click(object sender, EventArgs e)
@@ -127,6 +127,8 @@ namespace BMI_Guna2
                 }
             }
 
+            DateTime Date = DateTime.Now;
+            string Datee = Date.ToShortDateString();
             load_db();
             Ziak tmp = new Ziak();
             tmp.Height = heightbox.Text;
@@ -134,6 +136,7 @@ namespace BMI_Guna2
             tmp.Gender = radiobutton_male.Checked ? "Male" : "Female";
             tmp.Bmi = (float)bmi;
             tmp.Result = result2.Text;
+            tmp.Date = Datee;
             zoznam.Add(tmp);
             save_db();
         }

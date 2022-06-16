@@ -13,6 +13,7 @@ namespace BMI_Guna2
         public String Gender { get; set; }
         public float Bmi { get; set; }
         public String Result { get; set; }
+        public String Date { get; set; }
 
 
     }

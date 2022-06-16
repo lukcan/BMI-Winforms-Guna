@@ -38,7 +38,7 @@ namespace BMI_Guna2
             for (int i = zoznam.Count - 1; i >= 0; i--)
             {
                 var t = zoznam[i];
-                richTextBox1.Text += $"Height: { t.Height} Weight {t.Weight} Gender {t.Gender} Bmi {t.Bmi} Bmi {t.Result}\n";// "Height " + t.Height + "  Weight " + t.Weight + "  Gender " + t.Gender + " Bmi " + t.Bmi + "\n";
+                richTextBox1.Text += $"Date {t.Date} Height: { t.Height} Weight {t.Weight} Gender {t.Gender} Bmi {t.Bmi} Bmi {t.Result}\n";// "Height " + t.Height + "  Weight " + t.Weight + "  Gender " + t.Gender + " Bmi " + t.Bmi + "\n";
             }
 
             zoznam.Reverse();
@@ -48,6 +48,7 @@ namespace BMI_Guna2
         private void History_Load(object sender, EventArgs e)
         {
             load_db();
+            guna2DataGridView1.Columns["Bmi"].DefaultCellStyle.Format = "N2";
         }
     }
 }
